@@ -1,0 +1,61 @@
+/* 
+  Selectores
+  Son patrones que permiten seleccionar y aplicar estilos especificos a elementos de una pagina web.
+
+  Tipos de Selectores
+
+  1. Selectores basicos 
+    - Selectore Universal 
+    - Selector de Tipo
+
+  2. Selectores de Clase 
+
+  3. Selectores de ID
+
+  4. Selectores Combinados 
+    -Descendientes
+    -Hijo directo
+    -Elemento Adjacente
+    -Hermano general
+
+  5. Selectores de Atributos
+    -Atributo
+    -Atributo - Valor
+
+  6. Selectores Avanzados
+    -Pseudo-clase
+    -Pseudo-elementos
+*/
+
+/* 
+  Selectores Basicos
+
+  */
+
+/* Universal -> Seleccionar todos los elementos de un documento */
+
+* {
+  border: 2px solid red;
+  /* Reset Basico */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Selectores de Tipo -> Seleccionan un tipo de elemento en html */
+
+body {
+  background-color: lightcyan;
+}
+
+h1 {
+  color:darkslateblue;
+}
+
+p {
+  font-size:24px;
+}
+
+header {
+  background-color:blue;
+}
