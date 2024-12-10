@@ -19,6 +19,19 @@ Principales
 
   text-decoration -> Añade una linea transversal al texto. Recibe los valores: none, underline, overline, line-throgh.
 
+  tex-transform-> Controla la capitalizacion del texto. Recibe los valores: uppercase, lowercase y capitalize. 
+
+  line-heigh -> Espacio entre las lineas de texto. Recibe valores en px, %, em y rem, relativo al tamaño de la fuente.
+
+  letter-spacing -> Espacio entre bletras. Recibe valores en px, %, em y rem.
+
+  word-spacing -> Espacio entre palabras. Recibe valores en px, em y rem y el valor normal.
+
+  text-shadow -> Sombra del texto. Recibe los valores en el siguiente orden: offset-x offset-y blur color.
+    
+    10px 10px 10px red -> Derecha y abajo 
+
+    -10px -10px 10px blue -> izquierda y arriba 
   */
 
 h1 {
@@ -27,13 +40,24 @@ h1 {
   font-size: 64px;
   font-size: 100px; /* 16px = 100 */
   font-size: xx-large;
-  font-style: inherit;
+  font-style: oblique;
+
   text-align: center;
   text-decoration: underline;
+  text-transform: lowercase;
+  text-transform: uppercase;
+
+  letter-spacing: 20px;
+  letter-spacing: 1rem;
+  letter-spacing: 2em;
+  letter-spacing: -10px;
+  letter-spacing: normal;
+
+  text-shadow: 10px 10px 5px blueviolet;
 }
 
 p {
-  color:black;
+  color:white;
   font-family: 'Courier New', Tahoma;
   font-size: 24px;
   font-size: 100px;
@@ -41,13 +65,27 @@ p {
   font-style: left;
   text-align: right;
   text-decoration: none;
+  text-transform: uppercase;
+  text-transform: lowercase;
+  text-transform: capitalize;
+
+  line-height: 24px;
+  line-height: 150px;
+  line-height: 4;
+  line-height: 1rem;
+  line-height: 1em;
+
+  word-spacing: 60px;
+  word-spacing: 2rem;
+  word-spacing: 5em;
+  word-spacing: normal;
 }
 
 .important {
   text-decoration: underline;
 }
 
-a. {
+.a {
   color: yellow;
   font-size: xx-large;
   text-decoration: none;
