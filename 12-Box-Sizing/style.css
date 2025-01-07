@@ -1,0 +1,63 @@
+/* 
+  Boz Sizing
+  
+  Es la propiedad que calcula las dimensiones de un elemento incluyendo el padding y el border. Los dos valores que puede tener son::after
+  
+   box-sizing: content-box; // valor por defecto
+    
+    Si tenemos un elemento con width 100px, un pading 10px y un border de 5px, el ancho total del elemento sera de 130px.
+    
+    100px + 10px + 10px + 5px = 130px
+    ancho + padding l/r + border l/r = total del ancho.
+    
+    Esto es porque el padding y el border se suman al width del elemento.
+
+  box-sizing: border-box; // Incluye el padding y nel border
+
+    Si tenemos un elemento con width 100px,un padding 10px y un border de 5pz, el ancho total del elemento sera de 100px.
+
+    Esto es porque el padding y el border se incluyen en el width del elemento.
+
+  NOTA: Como buena practica se suele definir a todos los elementos de html la propiedad box-sezing. border-box; desde el principio a modo de un reser basico.
+
+   *{
+   box-sizing: border-box;
+   }
+  Esto se hace a traves del serlector universal "*"
+
+    */
+
+  /* Reset de estilos */
+* {
+  /*  padding: 0;
+  margin: 0;*/
+  box-sizing: border-box;
+}
+
+/* estilos base */
+html {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: darkslategray;
+  color:white
+}
+
+.content-box {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border: 5px solid lightgreen;
+  background-color: darksalmon;
+
+}
+
+.border-box {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border: 5px solid lightblue;
+  background-color: lightslategrey;
+  box-sizing: border-box
+}
