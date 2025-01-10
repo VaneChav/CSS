@@ -1,0 +1,54 @@
+/* 
+
+Border Radius
+
+Nos permite redondear lsdesquinas de los elementos en html.
+
+Es un shothand
+(avreviatura) nque engloba 4 propiedades:
+
+  border-top-left-radius:
+  border-top-tight-radius:
+  border-bottom-rigth-radius:
+  borde-bottom-left-radius:
+
+*/
+
+html {
+  font-family: sans-serif
+}
+
+body {
+  background-color: darkslateblue;
+  color:white
+}
+.box {
+  width:300px;
+  height: 300px;
+  background-color: lightcoral;
+
+  border-radius: 32px;
+  border-radius: 32px 72px; /* v1 -> t1 y br / v2 -> tr y bl*/
+  border-radius: 32px 64px 120px; /* v1 -> tl / v2 -> tr y bl / v2 -> br */
+  border-radius: 32px 48px 72px 120px; /* tl / tr/ br/ bl*/
+}
+
+.box-2 {
+  width:300px;
+  height: 300px;
+  background-color:lightseagreen;
+
+  border-top-left-radius: 32px;
+  border-top-right-radius: 48px;
+  border-bottom-right-radius: 72px;
+  border-bottom-left-radius: 120px;
+}
+
+.box-3 {
+  width: 300px; /* 1:1 */
+  height: 500px;
+  background-color: lightblue;
+
+  border-radius: 150px;
+  border-radius: 50px;
+}
