@@ -1,0 +1,169 @@
+/* 
+  Position
+
+  Es la propieda que nos permite POSICIONAR los elementos del html.
+
+  Conceptos Importantes:
+
+    1.Flujo de Renderizado: Los elementos en html se dibujan de izquierda a derecha y se dibujan de derecha a izquierda y de arriba a abajo.
+
+    2. Espacio Resevado: Es el espacio que tiene un elemento asignado en el navegador.
+
+    3. Elemento Posicionado: Es cuando su propiedad "position" tiene un valor distinto a  "static", que es el valor por default.
+
+    4. Stacking Context: Contexto de Apilamiento. Es el orden en el que se superponen o apilan, los elementos en hyml.
+
+  Alposicionar un elemento se habilitan 5 propiedades que podemos udar para mover el elemento en 4 ejes. (x, y, z)
+
+    top -> Movera el elemento desde la parte superior.
+    reigth -> Movera el elemento desde la parte derecha.
+    bottom -> Movera el elemento desde la parte inferior.
+    left -> Movera el elemento desde la parte izquierda.
+
+  *Los elementos tienen su punto de origen (0,0) en la esquina superior.
+  *La distancia a moverse se indica en px y acepta valores negativos.
+  *Si a un elemento le declaramos la propiedad top, bottom deja de funcionar. 
+  *Si a un elemento le declaramos la propiedad left, rigth deja de funcionar.
+
+    z-index -> Nos permite mover el elemento en el contexto de apilamiento. (eje z). Recibe valores en numero o indices, sin unidad. Puede recibir valores negativos.
+
+  Los posibles valores que "position" resi9ve son:
+    
+    static   -> Es el valor por default de los elementos. Con este valor el elemento NO ESTA PISICIONADO y npo podemos moverlo.
+
+    relative -> El elemento mantiene su posicion y medidas en el flujo de renderizado. Mantendra su espacio reservado. Si loo movemos usara su contenedor como referencia. 
+
+    absolute -> El elemento perdera sus medidas y su espacio reservado. Si movemos el elemento se hara en funcion de su contenedor posicionado y si no tiene alguno, lo hara en funcion del elemento html.
+
+    fixed    -> El elemento perdera sus medidas y su espacio reservado. Si lo movemos usara el elemento html como referencia y quedara fijo en esa posicion a un que hagamos scroll.
+
+    sticky   -> Es una mezcla de "relative y fixed". Con este valor, las propiedades top, rigth, bottom y left.no sirven para mover el elemento. Si no para indicarle en que punto pasara a tener un concepto 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color:whitesmoke;
+  background-color:rgb(10, 67, 10);
+}
+
+.container {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  background-color: cadetblue;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+}
+
+.box-1 {
+  position: relative;
+  /* top: -20px;*/
+  /* left: -20px; */
+  right: -20px;
+  bottom: -20px;
+  z-index: 20;
+  background-color: rgb(5, 122, 122);
+}
+
+.box-2 {
+  position: relative;
+  left: 50px;
+  top: -25px;
+  z-index: 10;
+  background-color: darkslategrey;
+}
+
+.box-3 {
+  position: absolute;
+  top: 100px; 
+  left: 100px;
+  right: 0;
+  bottom: 0;
+  z-index: 15;
+  background-color: chartreuse;
+}
+
+.box-4 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 40;
+  background-color: lightseagreen;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  background-color:darkseagreen;
+}
+
+nav a {
+  font-size: 18px;
+  display: inline-block;
+  padding: 12px 8px;
+  text-decoration: none;
+  color: aliceblue;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.buttom {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10;
+  width: 100px;
+  height: 100;
+  font-size: 48px;
+  text-align: center;
+  padding-top: 18px;
+  border-radius: 50%;
+  background-color: aquamarine;
+  cursor: pointer;
+}
+
+.buttom:hover {
+  background-color: darkcyan;
+}
+
+main {
+  width: 100%;
+  max-width: 968px;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-color: darkslategrey;
+}
+
+main section {
+  padding: 0 24px;
+}
+
+section h2 {
+  position: sticky;
+  top: 0;
+  font-size: 34px;
+  background-color: darkgreen;
+}
+
+section p {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
